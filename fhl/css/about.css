@@ -1,0 +1,121 @@
+/* 关于页面专属样式 */
+:root {
+  --clr-primary: #2563eb;
+  --clr-secondary: #1e40af;
+  --clr-accent: #3b82f6;
+  --clr-bg: #f8fafc;
+  --clr-text: #1e293b;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+}
+
+/* 关于页面容器 */
+.about-section {
+  padding: 4rem 0;
+  background: var(--clr-bg);
+}
+
+.about-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--clr-primary);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.about-section h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--clr-accent);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+/* 内容布局 */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  color: var(--clr-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--clr-text);
+}
+
+/* 里程碑数据展示 */
+.milestones {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.milestone {
+  text-align: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.milestone:hover {
+  transform: translateY(-5px);
+}
+
+.milestone .number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--clr-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.milestone .label {
+  font-size: 0.9rem;
+  color: var(--clr-text);
+}
+
+/* 图片样式 */
+.about-content img {
+  width: 45%;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.about-content img:hover {
+  transform: scale(1.02);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content img {
+    width: 80%;
+    order: -1;
+  }
+
+  .milestones {
+    flex-direction: column;
+  }
+}

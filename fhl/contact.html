@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 | 智玩科技 - AI玩具解决方案专家</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://webapi.amap.com/maps?v=2.0&key=您的高德地图KEY"></script>
+</head>
+<body>
+    <!-- 导航栏（与首页一致） -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-robot"></i>
+                <span>智玩科技</span>
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="services.html">服务方案</a></li>
+                    <li><a href="contact.html" class="active">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 联系表单与地图 -->
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="section-title">联系我们</h1>
+            <div class="contact-grid">
+                <!-- 表单区域 -->
+                <div class="contact-form">
+                    <h2><i class="fas fa-paper-plane"></i> 商务合作咨询</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">需求描述</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">发送消息</button>
+                    </form>
+                </div>
+
+                <!-- 联系信息与地图 -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>深圳总部</h3>
+                        <p>深圳市福田区车公庙NEO大厦A座18层</p>
+                        <a href="javascript:void(0)" id="viewMap">查看地图导航</a>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>联系电话</h3>
+                        <p><a href="tel:+8675588888888">+86 755 8888 8888</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>商务邮箱</h3>
+                        <p><a href="mailto:bd@smart-toy.ai">bd@smart-toy.ai</a></p>
+                    </div>
+                    <div id="miniMap"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚（与首页一致） -->
+    <footer class="footer">
+        <!-- 页脚内容 -->
+    </footer>
+
+    <script src="js/map.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
